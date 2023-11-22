@@ -148,8 +148,13 @@ function moveLeft() {
         currentPosition +=1
     }
 
+    
+
     draw();
 }
+
+
+
 
 
 //Y ahora hacia la derecha
