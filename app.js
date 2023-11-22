@@ -138,7 +138,7 @@ function freeze() {
 //Ahora vamos a definir los límites del mapa para que la ficha deje de moverse hacia el lado.
 //Empezamos definiendo la función para mover la pieza hacia la izquierda
 
-/* function moveLeft() {
+function moveLeft() {
     undraw();
     const isAtLeftEdge = current.some(index => (currentPosition + index) % width === 0)
 
@@ -146,40 +146,6 @@ function freeze() {
 
     if(current.some(index => squares[currentPosition + index].classList.contains('taken'))) {
         currentPosition +=1
-    }
-
-    
-
-    draw();
-} */
-
-/* function moveLeft() {
-    undraw();
-    const isAtLeftEdge = current.some(index => (currentPosition + index) % width === 0);
-
-    if (!isAtLeftEdge) {
-        // Verificar si algún índice está en el borde izquierdo
-        if (!current.some(index => (currentPosition + index - 1) % width === 0)) {
-            currentPosition -= 1;
-        }
-    }
-
-    if (current.some(index => squares[currentPosition + index].classList.contains('taken'))) {
-        currentPosition += 1;
-    }
-
-    draw();
-} */
-
-function moveLeft() {
-    undraw();
-    const isAtLeftEdge = current.some(index => (currentPosition + index) % width === 0);
-
-    if (!isAtLeftEdge) {
-        // Verificar si algún índice está en el borde izquierdo
-        if (!current.some(index => (currentPosition + index - 1) % width === 0) && !current.some(index => squares[currentPosition + index - 1].classList.contains('taken'))) {
-            currentPosition -= 1;
-        }
     }
 
     draw();
